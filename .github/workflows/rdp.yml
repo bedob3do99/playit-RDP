@@ -1,22 +1,20 @@
 name: Playit RDP Tunnel
 
 on:
-  workflow_dispatch:
+workflow_dispatch:
+jobs:
+setup-rdp-tunnel:
+runs-on: windows-latest
 
-  jobs:
-    setup-rdp-tunnel:
-        runs-on: windows-latest
-
-            steps:
-                - name: Check out the repository
-                      uses: actions/checkout@v2
-
-                          - name: Download and Install Playit
-                                run: |
-                                        Invoke-WebRequest -Uri "https://github.com/playit-cloud/playit-agent/releases/download/v "$env:USERPROFILE\playit.exe"
-                                                Start-Sleo compconds 5  # Give some time lt, optional.
-                                                    - nameM:\Sablem\Curre tContr Set-ItemProperty inal Server'-nase "fDurrTSConnections" -Value 0
-                                                        al Server'-name "fDeewaSConne -ions"ayGroup "Remote Desktop"ur   - rntrolSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "Userl\Terminal Server\WinStations\RDP-Tcp' -name "Userl\Terminal Server\WinStations\RDP-Tcpet-Lome UseerAutme "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "p@sswssword (ConvertTo-SecureString -AsPlainText "p@sswssword (ConvertTo-SecureString -AsPlainText "p@sswssword (ConvertTo-SecureString -AsPlainText "p@ssw0rd!" -Force)
+steps:
+- name: Check out the repository
+ uses: actions/checkout@v2
+ - name: Download and Install Playit
+   run: |
+  Invoke-WebRequest -Uri "https://github.com/playit-cloud/playit-agent/releases/download/v "$env:USERPROFILE\playit.exe"
+ Start-Sleo compconds 5  # Give some time lt, optional.
+- nameM:\Sablem\Curre tContr Set-ItemProperty inal Server'-nase "fDurrTSConnections" -Value 0
+al Server'-name "fDeewaSConne -ions"ayGroup "Remote Desktop"ur   - rntrolSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "Userl\Terminal Server\WinStations\RDP-Tcp' -name "Userl\Terminal Server\WinStations\RDP-Tcpet-Lome UseerAutme "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "p@sswssword (ConvertTo-SecureString -AsPlainText "p@sswssword (ConvertTo-SecureString -AsPlainText "p@sswssword (ConvertTo-SecureString -AsPlainText "p@ssw0rd!" -Force)
 
                                                             - name: Start Playit and Set Up Rsecrets.PL }} 
                                                                   run: |
