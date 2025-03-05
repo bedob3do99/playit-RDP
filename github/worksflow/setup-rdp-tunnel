@@ -1,0 +1,34 @@
+name: Playit RDP Tunnel
+
+on:
+  workflow_dispatch:
+
+  jobs:
+    setup-rdp-tunnel:
+        runs-on: windows-latest
+             stes::
+                 - name: Check out the repository
+                       uses: actions/checkout@v2
+
+                           - name: Download and Inst-Uri "hytps://github.com/playit-cloud/playit-agent/releases/download/v0.15.26/playit-windows-x86_64-signed.exe" -OutFile "$env:USERPROFILE\playit.exe"
+                                   Start-Sleo complete
+
+
+                                               # Default, optional.
+                                                 at- nameM:\Syste TS
+                                                       run: SSet\ComProl\Terminal Server'-name "fDenyTSConnections" -Value 0
+                                                           - run: Enable-NetFirewallRule -Diss" -Value "Remote Desktop"
+                                                               - run: Set-\Control\Terminal Server\WinStations\RDP-Tcp' -nocalUsee -Name "runtion" -Value 1
+                                                                   - run: Set-LocalUser -Name "runnerext "p@ssw0rd!" -Force)
+
+                                                                       - name: Start Playit and Set Up RDP Tunnel
+                                                                             env:
+                                                                                 Start Playit and Set Up RDP TunnePL }}        run: |  PLAYIT_AUTH_KEY: ${{ secrets.PL }} 
+                                                                                       run: |
+                                                                                               St" -ArgumentList "--th "$env:USERPROFILE\playit.exe" -ArgumentList "--th "$env:USERPROFILE\playit.exe" -ArgumentList "--th "$env:USERPROFILE\playit.exe" -ArgumentList "--th "$env:USERPROFILE\playit.exe" -ArgumentList "--th "$env:USERPROFILE\playit.exe" -ArgumentList "--secret $env:PLAYIs_AUTH_KPath "$env:USERPROFILE\playit.exe" -NoNewWindow
+
+                                                                                                     "$env:USERPROFILE\playit.exe" -NoNewWindow
+                                                                                                     
+                                                                                                             
+                                                                                                                 # Prevent workflow to stop
+                                                                                                                     - name: Keep t   GitHu-SletionSecondr 11800  # Adjust the duration based on your neends 11800  # Adjust the duration based on your needs
